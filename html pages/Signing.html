@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Signing.css">
+</head>
+
+<body>
+    <div id="container" class="login">
+        <div id="svg">
+            <a href="eCommerce_site.html"><img src="../svgs/brands/amazon.svg" onclick="back()" alt="Image"></a>
+        </div>
+        <div id="form">
+            <h1>Sign-In</h1>
+            <form action="#" method="POST" onsubmit="givAlart(); return false">
+                <label for=""> <h3> Email or mobile phone number</h3></label>
+                <input type="text" id="email" onfocus="myFunction(this)"> <br>
+                <p>Enter your email or mobile phone number</p>
+                <input type="submit" id="btn" value="Continue">
+                <p> By continuing , you agree to Shop
+                    <a href=""> Condition of Use</a> and <a href="">Privacy Notice</a> </p>
+            </form>
+            <div>
+                <ul>
+                    &#10148;Do You have any Problem?
+                    <li><a href="#">Password</a></li>
+                    <li><a href="#">Other With Signing</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="nacnt">
+            <p> <small>New to Our Shop?</small></p>
+            <a href="">Creat New Account</a>
+        </div>
+        <div class="footer">
+            <ul>
+                <li><a href="">Condition of Us</a></li>
+                <li><a href="">Privacy Notice</a></li>
+                <li><a href="">Help</a></li>
+            </ul>
+            <span>© 1996-2021, Amazon.com, Inc. or its affiliates </span> <br> <br>
+            <button id="color" onclick="getfocus()">Change Color</button>
+            <button id="color" onclick="losefocus()">Change Color</button>
+        </div>
+
+</body>
+<script>
+    function givAlart() {
+        alert("Be careful about Your Email , Because All transaction will be this");
+        var x = document.getElementById("email").value;
+        document.getElementById("email").focus();
+        document.write("<textarea id='tarea' cols='30' rows='10'></textarea>");
+        document.getElementById("tarea").innerHTML = x;
+        document.getElementById("tarea").style.backgroundColor = "green"
+        console.log(x);
+    }
+    // onfocus Function
+    function myFunction(x) {
+        x.style.background = "red";
+    }
+
+    function getfocus() {
+        document.querySelector(".login").focus();
+    }
+
+    function losefocus() {
+        document.querySelector(".login").blur();
+    }
+
+    function back() {
+        window.alert("Do You Want To Go Back")
+    }
+</script>
+
+</html>
